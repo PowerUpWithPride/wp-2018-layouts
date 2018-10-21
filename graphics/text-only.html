@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .monospace {
+            font-family: monospace;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/current-run.js"></script>
+</head>
+<body>
+<div class="container">
+    <p class="lead">This is a simple text-only page to show all the dynamic data values as a proof of concept!</p>
+    <h2>Current Run Info</h2>
+    <p>Game: <span id="gameTitle"></span></p>
+    <p>Category: <span id="gameCategory"></span></p>
+    <p>System: <span id="gameSystem"></span></p>
+    <p>Estimate: <span id="gameEstimate"></span></p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Runner</th>
+            <th>Twitch Handle</th>
+        </tr>
+        </thead>
+        <tbody id="runner-names-tbody">
+        </tbody>
+    </table>
+    <h2>Timer</h2>
+    <h4 id="timer"></h4>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Runner</th>
+            <th>Finish Time</th>
+        </tr>
+        </thead>
+        <tbody id="runner-times-tbody">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
