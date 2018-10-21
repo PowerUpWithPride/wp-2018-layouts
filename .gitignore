@@ -74,3 +74,6 @@ typings/
 
 # WebStorm IDE config
 .idea
+
+# Node package lock
+package-lock.json
