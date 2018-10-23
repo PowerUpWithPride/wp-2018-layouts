@@ -11,6 +11,15 @@ $(() => {
     let runners = $('#runner-names-tbody');
     let timer = $('#timer');
     let runnerTimes = $('#runner-times-tbody');
+    let bidList = $('#bids');
+
+    // Formatter for $USD
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2
+    });
 
     // This is where the information is received for the run we want to display.
     // The "change" event is triggered when the current run is changed.
@@ -33,6 +42,12 @@ $(() => {
     finishedTimers.on('change', (newVal, oldVal) => {
         if (newVal)
             updateFinishedTimes(newVal);
+    });
+
+    // This is the current bids.
+    let bids = nodecg.Replicant('bids');
+    bids.on('change', (newVal, oldVal) => {
+        updateBids(newVal);
     });
 
     // Extract Twitch username from stream URL.
@@ -82,6 +97,23 @@ $(() => {
         $('.finish-time').empty();
         for (let time of finishedTimes) {
             $('#finish-time-' + time.index).html(time.time);
+        }
+    }
+
+    // Make list of bids.
+    function updateBids(currentBids) {
+        bidList.empty();
+        for (let bid of currentBids) {
+            let li = $('<li>').html(bid.game + ': ' + bid.name);
+            if (bid.goal) {
+                li.html(li.html() + ' - ' + formatter.format(bid.total) + '/' + formatter.format(bid.goal));
+            } else if (bid.options) {
+                let sublist = $('<ul>').appendTo(li);
+                for (let option of bid.options) {
+                    sublist.append($('<li>').html(option.name + ' - ' + formatter.format(option.total)));
+                }
+            }
+            bidList.append(li);
         }
     }
 });

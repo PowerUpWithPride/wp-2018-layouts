@@ -7,5 +7,5 @@ module.exports = function(nodecg) {
     nodecgAPIContext.set(nodecg);
 
     // Other extension files we need to load.
-    // TODO: require('./tracker');
+    require('./tracker');
 }

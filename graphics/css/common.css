@@ -1,3 +1,7 @@
+body {
+    background-color: transparent;
+}
+
 .timer_stopped, .timer_running {
     color: black;
 }
