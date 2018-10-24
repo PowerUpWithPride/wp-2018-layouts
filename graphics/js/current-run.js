@@ -13,14 +13,6 @@ $(() => {
     let runnerTimes = $('#runner-times-tbody');
     let bidList = $('#bids');
 
-    // Formatter for $USD
-    const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-        maximumFractionDigits: 2,
-        minimumFractionDigits: 2
-    });
-
     // This is where the information is received for the run we want to display.
     // The "change" event is triggered when the current run is changed.
     let runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
@@ -106,7 +98,7 @@ $(() => {
         for (let bid of currentBids) {
             let li = $('<li>').html(bid.game + ': ' + bid.name);
             if (bid.goal) {
-                li.html(li.html() + ' - ' + formatter.format(bid.total) + '/' + formatter.format(bid.goal));
+                li.html(li.html() + ' - ' + currencyFormatter.format(bid.total) + '/' + formatter.format(bid.goal));
             } else if (bid.options) {
                 let sublist = $('<ul>').appendTo(li);
                 for (let option of bid.options) {
