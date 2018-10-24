@@ -1,7 +1,7 @@
+// NodeCG extension code for pulling donation totals and current bids from the donation tracker site.
+
 'use strict';
 
-// The bundle name where all the run information is pulled from.
-let speedcontrolBundle = 'nodecg-speedcontrol';
 
 // Referencing packages.
 let request = require('request-promise').defaults({jar: true}); // Automatically saves and re-uses cookies.
@@ -35,7 +35,7 @@ function updateDonationTotalFromAPI() {
                 nodecg.log.info('API donation total changed:', '$' + total);
             donationTotal.value = total;
         } else {
-            nodecg.log.warn('Error updating donation total:', err);
+            nodecg.log.error('Error updating donation total:', err);
         }
     });
 }
@@ -57,7 +57,7 @@ function updateBids() {
             bids.value = currentBids;
         }
         else {
-            nodecg.log.warn('Error updating bids:', err);
+            nodecg.log.error('Error updating bids:', err);
         }
     });
 }
