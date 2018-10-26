@@ -98,11 +98,11 @@ $(() => {
         for (let bid of currentBids) {
             let li = $('<li>').html(bid.game + ': ' + bid.name);
             if (bid.goal) {
-                li.html(li.html() + ' - ' + currencyFormatter.format(bid.total) + '/' + formatter.format(bid.goal));
+                li.html(li.html() + ' - ' + currencyFormatter.format(bid.total) + '/' + currencyFormatter.format(bid.goal));
             } else if (bid.options) {
                 let sublist = $('<ul>').appendTo(li);
                 for (let option of bid.options) {
-                    sublist.append($('<li>').html(option.name + ' - ' + formatter.format(option.total)));
+                    sublist.append($('<li>').html(option.name + ' - ' + currencyFormatter.format(option.total)));
                 }
             }
             bidList.append(li);
