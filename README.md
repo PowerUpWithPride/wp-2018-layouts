@@ -25,7 +25,7 @@ Create a fresh directory, and run the NodeCG setup in it:
 Install both the Speedcontrol bundle and this one from GitHub using the following commands:
 
 ```
-> nodecg install PowerUpWithPride/nodecg-speedcontrol
+> nodecg install speedcontrol/nodecg-speedcontrol
 > nodecg install PowerUpWithPride/wp-2018-layouts
 ```
 
