@@ -31,8 +31,18 @@ nodecg install PowerUpWithPride/wp-2018-layouts
 
 This will create a `bundles` subfolder inside your new directory that contains git repositories of these two bundles.  You can now make whatever changes and tweaks you like from that location.
 
-### 5. Copy config files
-Create a new subdirectory called `cfg` and copy whatever config files you would like from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts).  The only one strictly necessary will be the one specifically for this bundle since it has the donation tracker URL.
+### 5. Generate config files
+
+You can generate default config files for the bundles based on their config schemas:
+
+```bash
+nodecg defaultconfig nodecg-speedcontrol
+nodecg defaultconfig wp-2018-layouts
+```
+
+This will create a new subdirectory called `cfg` for the config files.
+
+You can also copy the JSON config files from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts).  The only one strictly necessary will be the one specifically for this bundle since it has the donation tracker URL.
 
 ### 6. Run the server locally to test
 In the directory where you ran setup initially, run the following:
@@ -42,3 +52,7 @@ nodecg start
 ```
 
 The server should run on `localhost:9090` by default.  You can open this location in your web browser and start experimenting.
+
+### 7. Running in production
+
+To run NodeCG in production, [pm2](https://pm2.io) is recommended.
