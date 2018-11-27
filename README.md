@@ -7,7 +7,7 @@ You will need to have an appropriate version of NodeCG installed to use it.
 ### 1. Install Node.js
 Instructions on the Node.js site here: https://nodejs.org/en/
 
-**NOTE:** At time of this writing, Speedcontrol appears to only work with up to the current LTS version 10.x and not the new version 11 of Node.js so install the LTS 10.x version.
+**NOTE:** At time of this writing, the current LTS version is 10.13 and NodeCG recommends sticking with the LTS releases for production.  It should work with the current stable version as well, which is 11.2 currently, but you'll have to test this yourself.
 
 ### 2. Install NodeCG modules
 Follow the quick start guide here: https://nodecg.com/tutorial-3_quick-start.html
