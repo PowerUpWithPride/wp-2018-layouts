@@ -42,7 +42,7 @@ nodecg defaultconfig wp-2018-layouts
 
 This will create a new subdirectory called `cfg` for the config files.
 
-You can also copy the JSON config files from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts).  The only one strictly necessary will be the one specifically for this bundle since it has the donation tracker URL.
+You can check out the JSON config files from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts) for NodeCG and Speedcontrol themselves to see exactly what settings we're using.  You should copy the Speedcontrol one at least, because that includes the Twitch integration settings.
 
 ### 6. Run the server locally to test
 In the directory where you ran setup initially, run the following:
