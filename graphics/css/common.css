@@ -1,5 +1,11 @@
+@font-face {
+    font-family: Chosence;
+    src: url('../fonts/Chosence_Regular.otf');
+}
+
 body {
     background-color: transparent;
+    font-family: Chosence, sans-serif;
 }
 
 .timer_stopped, .timer_running {
