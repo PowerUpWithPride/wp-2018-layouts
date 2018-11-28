@@ -6,7 +6,7 @@
 			"type": "object",
 			"properties": {
 				"url": {"type": "string", "default": "https://tracker.powerupwithpride.org"},
-				"eventId": {"type": "string", "default": "1"}
+				"eventId": {"type": "string", "default": "2"}
 			}
 		}
 	}
