@@ -22,6 +22,10 @@ const layouts = nodecg.Replicant('gameLayouts', {
         {name: 'Game Boy 1 Player', code: 'gb-1p'},
         {name: 'DS 1 Player', code: 'ds-1p'},
         {name: '3DS 1 Player', code: '3ds-1p'},
+        {name: 'FF4 Randomizer', code: 'ff4r'},
+        {name: 'Dragon Warrior Randomizer', code: 'dwr'},
+        {name: 'Zelda 1 Randomizer', code: 'z1r'},
+        {name: 'Zelda 3 Randomizer', code: 'z3r'},
     ],
     persistent: false
 });
