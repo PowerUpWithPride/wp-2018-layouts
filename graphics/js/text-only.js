@@ -9,6 +9,7 @@ $(() => {
     let gameCategory = $('#gameCategory');
     let gameSystem = $('#gameSystem');
     let gameEstimate = $('#gameEstimate');
+    let gameLayout = $('#gameLayout');
     let runners = $('#runner-names-tbody');
     let timer = $('#timer');
     let runnerTimes = $('#runner-times-tbody');
@@ -20,6 +21,13 @@ $(() => {
     runDataActiveRun.on('change', (newVal, oldVal) => {
         if (newVal)
             updateSceneFields(newVal);
+    });
+
+    let currentLayout = nodecg.Replicant('currentGameLayout', puwpBundle);
+    currentLayout.on('change', (newVal, oldVal) => {
+        if (newVal) {
+            gameLayout.text(`${newVal.name} (${newVal.code})`);
+        }
     });
 
     // This is where the timer information is received.
