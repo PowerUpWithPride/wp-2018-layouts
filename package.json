@@ -5,28 +5,18 @@
   "homepage": "https://layout.powerupwithpride.org",
   "author": "DorkmasterFlek",
   "dependencies": {
-    "clone": "^2.1.2",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2"
   },
   "nodecg": {
     "compatibleRange": "^1.0.0",
     "dependencies": [
-      "speedcontrol/nodecg-speedcontrol:>=0.9"
+      "speedcontrol/nodecg-speedcontrol:>=0.9",
+      "PowerUpWithPride/nodecg-puwp:>=1.0"
     ],
     "graphics": [
       {
         "file": "text-only.html",
         "width": 1280,
         "height": 720
-      }
-    ],
-    "dashboardPanels": [
-      {
-        "name": "game-layout-override",
-        "title": "Game Layout Override",
-        "width": 2,
-        "file": "game-layout-override.html"
       }
     ]
   },
