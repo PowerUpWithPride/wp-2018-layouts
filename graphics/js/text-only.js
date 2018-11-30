@@ -1,7 +1,8 @@
 'use strict';
 $(() => {
     // The bundle name where all the run information is pulled from.
-    let speedcontrolBundle = 'nodecg-speedcontrol';
+    const speedcontrolBundle = 'nodecg-speedcontrol';
+    const puwpBundle = 'nodecg-puwp';
 
     // JQuery selectors.
     let gameTitle = $('#gameTitle');
@@ -37,7 +38,7 @@ $(() => {
     });
 
     // This is the current bids.
-    let bids = nodecg.Replicant('bids');
+    let bids = nodecg.Replicant('bids', puwpBundle);
     bids.on('change', (newVal, oldVal) => {
         updateBids(newVal);
     });

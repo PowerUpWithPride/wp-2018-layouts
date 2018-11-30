@@ -1,13 +1,11 @@
-wp-2018-layouts is a [NodeCG](http://github.com/nodecg/nodecg) bundle. 
-It works with NodeCG versions which satisfy this [semver](https://docs.npmjs.com/getting-started/semantic-versioning) range: `^1.0.0`
-You will need to have an appropriate version of NodeCG installed to use it.
+This is a [NodeCG](http://github.com/nodecg/nodecg) graphics bundle.  It is intended to be used with Speedcontrol, as well as [our extra Speedcontrol addon bundle](http://github.com/PowerUpWithPride/nodecg-puwp) for some extra core functionality.
 
 ## Getting Started
 
 ### 1. Install Node.js
 Instructions on the Node.js site here: https://nodejs.org/en/
 
-**NOTE:** At time of this writing, the current LTS version is 10.13 and NodeCG recommends sticking with the LTS releases for production.  It should work with the current stable version as well, which is 11.2 currently, but you'll have to test this yourself.
+**NOTE:** At time of this writing, the current LTS version is 10.x and the NodeCG developers recommend sticking with the LTS releases for production.  It should work with the current stable version as well, which is 11.x currently, but you'll have to test this yourself.
 
 ### 2. Install NodeCG modules
 Follow the quick start guide here: https://nodecg.com/tutorial-3_quick-start.html
@@ -22,10 +20,11 @@ nodecg setup
 ```
 
 ### 4. Install bundles
-Install both the Speedcontrol bundle and this one from GitHub using the following commands:
+Install the Speedcontrol bundle, [our extra Speedcontrol functionality](http://github.com/PowerUpWithPride/nodecg-puwp), and this bundle from GitHub using the following commands:
 
 ```bash
 nodecg install speedcontrol/nodecg-speedcontrol
+nodecg install PowerUpWithPride/nodecg-puwp
 nodecg install PowerUpWithPride/wp-2018-layouts
 ```
 
@@ -37,10 +36,10 @@ You can generate default config files for the bundles based on their config sche
 
 ```bash
 nodecg defaultconfig nodecg-speedcontrol
-nodecg defaultconfig wp-2018-layouts
+nodecg defaultconfig nodecg-puwp
 ```
 
-This will create a new subdirectory called `cfg` for the config files.
+This will create a new subdirectory called `cfg` for the config files.  Update the `nodecg-puwp.json` file with your settings for any extra custom layouts, and donation tracker settings if you're using it.
 
 You can check out the JSON config files from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts) for NodeCG and Speedcontrol themselves to see exactly what settings we're using.  You should copy the Speedcontrol one at least, because that includes the Twitch integration settings.
 
