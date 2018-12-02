@@ -3,10 +3,10 @@
     src: url('../fonts/Chosence_Regular.otf');
 }
 
-.timer_paused {
-    color: orange;
-}
+/*.timer_paused {*/
+    /*color: orange;*/
+/*}*/
 
-.timer_finished {
-    color: lightgreen;
-}
+/*.timer_finished {*/
+    /*color: lightgreen;*/
+/*}*/
