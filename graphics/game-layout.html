@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Winter Pride 2018 Game Layout</title>
+
+    <link rel="stylesheet" href="css/common.css">
+
+    <!--Layout-specific CSS file is updated via the layout change Javascript file below.-->
+    <link id="layout-css-file" rel="stylesheet" href="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/donations.js"></script>
+    <script src="js/game-layout/layout-change.js"></script>
+    <script src="js/game-layout/players.js"></script>
+    <script src="js/game-layout/run-info.js"></script>
+    <script src="js/game-layout/timer.js"></script>
+</head>
+<body>
+
+<!--16:9 1 player-->
+<div class="game-layout-container" id="layout-container-16_9-1p">
+    <div class="wrapper">
+        <div class="footer">
+            <div class="footer-left">
+                <div class="donation-total"></div>
+            </div>
+            <div class="footer-mid">
+                <div class="footer-mid-left">
+                    <div class="game-name"></div>
+                    <div class="game-details">
+                        <div class="game-detail category"></div>
+                        <div class="game-detail platform"></div>
+                        <div class="game-detail year"></div>
+                        <div class="game-detail estimate"></div>
+                    </div>
+                </div>
+
+                <div class="footer-mid-right">
+                    <div class="pronouns pronouns1"></div>
+                    <div class="runner-name runner-name1"></div>
+                </div>
+
+            </div>
+            <div class="footer-right">
+                <div class="timer"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--4:3 1 player-->
+<div class="game-layout-container" id="layout-container-4_3-1p">
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="game-name"></div>
+            <div class="timer"></div>
+            <div class="runner-details">
+                <div class="runner-name runner-name1"></div>
+                <div class="pronouns pronouns1"></div>
+            </div>
+
+            <div class="game-details">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class='cell'>Category:</td>
+                        <td class='cell game-detail category'></td>
+                    </tr>
+                    <tr>
+                        <td class='cell'>System:</td>
+                        <td class='cell game-detail platform'></td>
+                    </tr>
+                    <tr>
+                        <td class='cell'>Estimate:</td>
+                        <td class='cell game-detail estimate'></td>
+                    </tr>
+                    <tr>
+                        <td class='cell'>Released:</td>
+                        <td class='cell game-detail year'></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="donation-total"></div>
+        </div>
+    </div>
+</div>
+
+<!--TODO: Add the rest of the layouts with containers below!-->
+
+</body>
+<html>

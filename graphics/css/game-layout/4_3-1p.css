@@ -1,0 +1,108 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --sidebar-width: 495px;
+    --puwp-blue: #0084ff;
+}
+
+.wrapper {
+    background: url('../../img/game-layout/4_3-1p.png') no-repeat;
+    font-family: "Chosence", sans-serif;
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    right: 0;
+    width: var(--sidebar-width);
+    height: 1080px;
+    font-size: 48px;
+}
+
+.game-name {
+    position: absolute;
+    width: var(--sidebar-width);
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+}
+
+.runner-details {
+    position: absolute;
+    right: 26px;
+    width: 444px;
+    height: 80px;
+    top: 228px;
+}
+
+.runner-name {
+    position: absolute;
+    left: 10px;
+    width: 364px;
+    height: 80px;
+    line-height: 80px;
+    color: var(--puwp-blue);
+    font-size: 54px;
+}
+
+.pronouns {
+    position: absolute;
+    font-size: 30px;
+    right: 0;
+    top: 5px;
+    height: 80px;
+    width: 80px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0;
+    width: 206px;
+    height: 131px;
+}
+
+.donation-total{
+    position: absolute;
+    bottom: 0;
+    width: var(--sidebar-width);
+    height: 146px;
+    line-height: 146px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.timer {
+    position: absolute;
+    top: 123px;
+    right: 41px;
+    width: 328px;
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+    color: var(--puwp-blue);
+    font-size: 72px;
+}
+
+.game-details {
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    top: 328px;
+    left: 21px;
+}
+
+.cell {
+    width: 150px;
+    height: 20px;
+}
+
+.game-detail {
+    color: var(--puwp-blue);
+}

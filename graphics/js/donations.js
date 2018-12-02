@@ -4,7 +4,7 @@ $(() => {
     const puwpBundle = 'nodecg-puwp';
 
     // JQuery selectors.
-    let donationTotalElement = $('#donationTotal');
+    let donationTotalElement = $('.donation-total');
 
     // Update donation total when changed.  Animate the number increasing to the new total.
     let donationTotal = nodecg.Replicant('donationTotal', puwpBundle);

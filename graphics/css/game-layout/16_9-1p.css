@@ -1,0 +1,104 @@
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    background: url('../../img/game-layout/16_9-1p.png') no-repeat;
+    font-family: "Chosence", sans-serif;
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 1920px;
+    height: 131px;
+    font-size: 70px;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0;
+    width: 206px;
+    height: 131px;
+}
+
+.donation-total{
+    position: absolute;
+    top: 50px;
+    width: 206px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.footer-right {
+    position: absolute;
+    right: 0;
+    width: 206px;
+    height: 131px;
+}
+
+.timer {
+    height: 131px;
+    line-height: 131px;
+    text-align: center;
+}
+
+.footer-mid {
+    position: absolute;
+    left: 206px;
+    width: 1508px;
+    height: 131px;
+}
+
+.footer-mid-left {
+    position: absolute;
+    left: 42px;
+    height: 131px;
+    width: 1508px;
+}
+
+.game-name {
+    position: absolute;
+    top: 5px;
+}
+
+.game-details {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+}
+
+.game-detail {
+    font-size: 30px;
+    color: #0084ff;
+    width: 150px;
+}
+
+.footer-mid-right {
+    position: absolute;
+    right: 42px;
+    height: 131px;
+    width: 500px;
+}
+
+.pronouns {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 30px;
+    color: #0084ff;
+}
+
+.runner-name {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
