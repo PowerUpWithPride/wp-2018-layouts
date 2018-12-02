@@ -4,6 +4,7 @@
 $(() => {
     // The bundle name where all the run information is pulled from.
     const speedcontrolBundle = 'nodecg-speedcontrol';
+    const puwpBundle = 'nodecg-puwp';
 
     // JQuery selectors.
     let gameTitle = $('.game-name');
@@ -20,6 +21,8 @@ $(() => {
             updateSceneFields(newVal);
     });
 
+    let currentLayout = nodecg.Replicant('currentGameLayout', puwpBundle);
+
     // Sets information on the pages for the run.
     function updateSceneFields(runData) {
         let currentTeamsData = [];
@@ -29,18 +32,6 @@ $(() => {
             team.members.forEach(member => {teamData.members.push(createMemberData(member));});
             currentTeamsData.push(teamData);
         });
-
-        // Set each player names and pronouns.
-        let i = 0;
-        for (let team of currentTeamsData) {
-            for (let member of team.members) {
-                i += 1;
-                let name = $(".runner-name" + i);
-                let pronouns = $(".pronouns" + i);
-                name.text(member.name);
-                pronouns.text(member.pronouns);
-            }
-        }
 
         // Split year out from system platform, if present.
         let system = runData.system.split("-");
@@ -56,6 +47,21 @@ $(() => {
         gameSystem.html(system);
         gameYear.html(year);
         gameEstimate.html(runData.estimate);
+
+        // Set each player names and pronouns.
+        let i = 0;
+        for (let team of currentTeamsData) {
+            for (let member of team.members) {
+                i += 1;
+                let name = $(".runner-name" + i);
+                let pronouns = $(".pronouns" + i);
+                name.text(member.name);
+                pronouns.text(member.pronouns);
+            }
+        }
+
+        // Fix pronoun wrapping for the current layout if needed.
+        fixPronounWrapping(currentLayout.value);
     }
 
     // Easy access to create member data object used above.

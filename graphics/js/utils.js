@@ -24,3 +24,20 @@ function msToTime(duration, noHour) {
 
     return timeString;
 }
+
+// Fix pronoun wrapping on certain layouts.
+// Put a thin space after each slash if the layout needs wrapping.
+const layoutsToWrapPronouns = [
+    '4_3-1p',
+    // TODO: Add more here...
+];
+
+function fixPronounWrapping(layoutInfo) {
+    if (layoutsToWrapPronouns.includes(layoutInfo.code)) {
+        let pronounElements = $('.pronouns');
+        pronounElements.each((i, elem) => {
+            // Use .html() so it doesn't get doubly escaped.
+            $(elem).html($(elem).text().replace(/([-/_])/g,'$&&thinsp;'));
+        });
+    }
+}
