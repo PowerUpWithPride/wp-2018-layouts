@@ -1,3 +1,11 @@
+.game-layout-container{
+    display: none;
+}
+
+#layout-container-4_3-1p {
+    display: block;
+}
+
 body{
     box-sizing: border-box;
     padding: 0;

@@ -1,3 +1,10 @@
+.game-layout-container{
+    display: none;
+}
+
+#layout-container-16_9-1p {
+    display: block;
+}
 
 body{
     box-sizing: border-box;

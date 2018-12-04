@@ -37,7 +37,7 @@ function fixPronounWrapping(layoutInfo) {
         let pronounElements = $('.pronouns');
         pronounElements.each((i, elem) => {
             // Use .html() so it doesn't get doubly escaped.
-            $(elem).html($(elem).text().replace(/([-/_])/g,'$&&thinsp;'));
+            $(elem).html($(elem).text().replace(/([-/_])/g,'$&&hairsp;'));
         });
     }
 }
