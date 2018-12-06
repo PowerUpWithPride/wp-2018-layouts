@@ -55,7 +55,7 @@ body{
     height: 80px;
     line-height: 80px;
     color: var(--puwp-blue);
-    font-size: 54px;
+    font-size: 46px;
 }
 
 .pronouns {
@@ -106,8 +106,13 @@ body{
     left: 21px;
 }
 
-.cell {
+.cell-header {
     width: 150px;
+    height: 20px;
+}
+
+.cell-value {
+    min-width: 250px;
     height: 20px;
 }
 

@@ -78,7 +78,7 @@ body{
 
 .donation-total{
     position: absolute;
-    bottom: 0;
+    bottom: 419px;
     width: var(--sidebar-width);
     height: 146px;
     line-height: 146px;
@@ -107,8 +107,8 @@ body{
 }
 
 .cell {
-    width: 150px;
-    height: 20px;
+    min-width: 150px;
+    height: 44px;
 }
 
 .game-detail {

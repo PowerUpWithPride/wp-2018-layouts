@@ -81,9 +81,9 @@ body{
 .game-details {
     display: flex;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 25px;
-    font-size: 44px;
+    font-size: 34px;
 }
 
 .game-detail {
@@ -91,9 +91,14 @@ body{
     width: 150px;
 }
 
-.cell {
-    width: 180px;
-    height: 52px;
+.cell-header {
+    width: 135px;
+    height: 42px;
+}
+
+.cell-value {
+    min-width: 250px;
+    height: 42px;
 }
 
 .footer-mid-right {

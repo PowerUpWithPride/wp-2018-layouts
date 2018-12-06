@@ -26,32 +26,36 @@ body{
 
 .sidebar {
     position: absolute;
-    right: 710px;
-    width: var(--sidebar-width);
-    height: 1080px;
+    right: 66px;
+    top: 577px;
+    width: 868px;
+    height: 483px;
     font-size: 48px;
 }
 
 .game-name {
     position: absolute;
-    width: var(--sidebar-width);
+    width: 851px;
     height: 98px;
     line-height: 98px;
-    text-align: center;
+    text-align: left;
+    top:0px;
+    left: 21px;
+    font-size:80px;
 }
 
 .runner-details1 {
     position: absolute;
-    top: 509px;
-    left: 440px;
+    top: 510px;
+    left: 608px;
     width: 257px;
     height: 46px;
 }
 
 .runner-name1 {
     position: absolute;
-    right: 0;
-    width: 208px;
+    right: -70px;
+    width: 207px;
     height: 46px;
     line-height: 46px;
     color: var(--puwp-blue);
@@ -71,15 +75,15 @@ body{
 
 .runner-details2 {
     position: absolute;
-    top: 509px;
-    right: 17px;
     width: 257px;
     height: 46px;
+    top: 510px;
+    right: 127px;
 }
 
 .runner-name2 {
     position: absolute;
-    right: 0;
+    right: -66px;
     width: 208px;
     height: 46px;
     line-height: 46px;
@@ -101,14 +105,14 @@ body{
 .runner-details3 {
     position: absolute;
     top: 525px;
-    left: 17px;
+    left: -13px;
     width: 257px;
     height: 46px;
 }
 
 .runner-name3 {
     position: absolute;
-    right: 0;
+    right: -60px;
     width: 208px;
     height: 46px;
     line-height: 46px;
@@ -127,34 +131,16 @@ body{
     text-align: center;
 }
 
-.runner-details4 {
-    position: absolute;
-    top: 525px;
-    right: 438px;
-    width: 257px;
-    height: 46px;
-}
-
-.runner-name4 {
-    position: absolute;
-    right: 0;
-    width: 208px;
-    height: 46px;
-    line-height: 46px;
-    color: var(--puwp-blue);
-    font-size: 30px;
-    text-align: center;
-}
-
-.pronouns4 {
+.pronouns {
     position: absolute;
     font-size: 20px;
-    left: 2px;
+    left: 80px;
     height: 46px;
-    width: 44px;
+    width: 32px;
     word-wrap: break-word;
-    text-align: center;
+    text-align: left;
 }
+
 
 .footer-left {
     position: absolute;
@@ -165,37 +151,42 @@ body{
 
 .donation-total{
     position: absolute;
-    bottom: 0px;
+    bottom: 24px;
     width: var(--sidebar-width);
     height: 146px;
     line-height: 146px;
     font-size: 100px;
     text-align: center;
+    left: -22px;
+
+    top: 333px;
 }
 
 .timer {
     position: absolute;
-    top: 123px;
-    right: 41px;
+    top: 365px;
+
+    left: 419px;
     width: 328px;
     height: 80px;
     line-height: 80px;
     text-align: right;
     color: var(--puwp-blue);
-    font-size: 72px;
+    font-size: 86px;
 }
 
 .game-details {
     display: flex;
     position: absolute;
-    font-size: 30px;
-    top: 224px;
+    font-size: 40px;
+    width: 510px;
+    top: 100px;
     left: 21px;
 }
 
 .cell {
-    width: 150px;
-    height: 20px;
+    width: 100000px;
+    height: 51px;
 }
 
 .game-detail {

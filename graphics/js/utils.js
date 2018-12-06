@@ -50,3 +50,60 @@ function fixPronounWrapping(layoutInfo) {
         });
     }
 }
+
+function getProgressBarColor(current, max){
+    let progress;
+    if (max) {
+        progress = current / max;
+    } else {
+        progress = 0;
+    }
+    let color = '#b52911';
+
+    if(progress > 0.6)
+    {
+        color = '#03b000';
+    }
+    else if(progress > 0.3)
+    {
+        color = '#da7500';
+    }
+
+    return color;
+}
+
+// Get team info from run data.
+function getRunnersFromRunData(runData) {
+    let currentTeamsData = [];
+    runData.teams.forEach(team => {
+        let teamData = {members: []};
+        team.members.forEach(member => {teamData.members.push(createMemberData(member));});
+        currentTeamsData.push(teamData);
+    });
+    return currentTeamsData;
+}
+
+// Easy access to create member data object used above.
+function createMemberData(member) {
+    // Gets username from URL.
+    let twitchUsername;
+    if (member.twitch && member.twitch.uri) {
+        twitchUsername = member.twitch.uri.split('/');
+        twitchUsername = twitchUsername[twitchUsername.length-1];
+    }
+
+    // Parse pronouns from the runner name, if they're present.
+    let name = member.names.international.split('-');
+    let pronouns = '';
+    if (name.length > 1) {
+        pronouns = name[1].trim();
+    }
+    name = name[0].trim();
+
+    return {
+        name: name,
+        pronouns: pronouns,
+        twitch: twitchUsername,
+        region: member.region
+    };
+}

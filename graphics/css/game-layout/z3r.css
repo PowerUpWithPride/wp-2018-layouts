@@ -91,8 +91,13 @@ body{
     width: 150px;
 }
 
-.cell {
-    width: 175px;
+.cell-header {
+    width: 135px;
+    height: 42px;
+}
+
+.cell-value {
+    min-width: 250px;
     height: 42px;
 }
 
@@ -113,7 +118,7 @@ body{
 
 .runner-name1 {
     position: absolute;
-    left:-23px;
+    left:-30px;
 	top: -1px;
     width: 359px;
     height: 80px;
@@ -129,7 +134,7 @@ body{
     right: 78px;
     top: 4px;
     height: 80px;
-    width: 70px;
+    width: 60px;
     word-wrap: break-word;
     color: white;
     text-align: center;
@@ -161,7 +166,7 @@ body{
     right: 3px;
     top: 3px;
     height: 80px;
-    width: 64px;
+    width: 60px;
     word-wrap: break-word;
     color: white;
     text-align: center;

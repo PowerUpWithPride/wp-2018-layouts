@@ -1,6 +1,33 @@
 // Main run info update functionality.
 'use strict';
 
+// TODO: This is garbage, do better.
+function FixSize(selector){
+
+    setTimeout(function(){
+        let divWidth = $(selector + ":visible").width();
+        let fontSize = 92;
+
+        // Reset font to default size to start.
+        $(selector).css("font-size", "");
+
+        let text_org = $(selector + ":visible").html();
+        let text_update = '<span style="white-space:nowrap;">' + text_org + '</span>';
+        $(selector + ":visible").html(text_update);
+
+        let childWidth = $(selector + ":visible").children().width();
+
+        // console.log(childWidth + " " + divWidth);
+
+        while ($(selector + ":visible").children().width() > divWidth){
+            // console.log($(selector + ":visible").children().width() + " " + divWidth);
+            $(selector).css("font-size", fontSize -= 1);
+        }
+
+        // console.log(fontSize)
+    }, 500);
+}
+
 $(() => {
     if (offlineMode) {
         loadOffline();
@@ -73,13 +100,7 @@ $(() => {
 
         // Sets information on the pages for the run.
         function updateSceneFields(runData) {
-            let currentTeamsData = [];
-
-            runData.teams.forEach(team => {
-                let teamData = {members: []};
-                team.members.forEach(member => {teamData.members.push(createMemberData(member));});
-                currentTeamsData.push(teamData);
-            });
+            let currentTeamsData = getRunnersFromRunData(runData);
 
             // Split year out from system platform, if present.
             let system = runData.system.split("-");
@@ -105,36 +126,13 @@ $(() => {
                     let pronouns = $(".pronouns" + i);
                     name.text(member.name);
                     pronouns.text(member.pronouns);
+                    FixSize('.runner-name' + i);
                 }
             }
 
             // Fix pronoun wrapping for the current layout if needed.
+            FixSize('.game-name');
             fixPronounWrapping(currentLayout.value);
-        }
-
-        // Easy access to create member data object used above.
-        function createMemberData(member) {
-            // Gets username from URL.
-            let twitchUsername;
-            if (member.twitch && member.twitch.uri) {
-                twitchUsername = member.twitch.uri.split('/');
-                twitchUsername = twitchUsername[twitchUsername.length-1];
-            }
-
-            // Parse pronouns from the runner name, if they're present.
-            let name = member.names.international.split('-');
-            let pronouns = '';
-            if (name.length > 1) {
-                pronouns = name[1].trim();
-            }
-            name = name[0].trim();
-
-            return {
-                name: name,
-                pronouns: pronouns,
-                twitch: twitchUsername,
-                region: member.region
-            };
         }
     }
 });

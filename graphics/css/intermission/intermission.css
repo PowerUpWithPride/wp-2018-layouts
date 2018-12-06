@@ -1,0 +1,321 @@
+div {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    --sidebar-width: 554px;
+    --puwp-blue: #0084ff;
+}
+
+.wrapper {
+    background: url('../../img/intermission/intermission.png') no-repeat;
+    font-family: "Chosence", sans-serif;
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 1080px;
+    font-size: 48px;
+}
+
+.game-name {
+    position: absolute;
+    width: var(--sidebar-width);
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+}
+
+.runner-details {
+    position: absolute;
+    right: 26px;
+    width: 444px;
+    height: 80px;
+    top: 228px;
+}
+
+.runner-name {
+    position: absolute;
+    left: 10px;
+    width: 364px;
+    height: 80px;
+    line-height: 80px;
+    color: var(--puwp-blue);
+    font-size: 54px;
+}
+
+.pronouns {
+    position: absolute;
+    font-size: 30px;
+    right: 5px;
+    top: 5px;
+    height: 80px;
+    width: 75px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0;
+    width: 206px;
+    height: 131px;
+}
+
+.donation-total{
+    position: absolute;
+    bottom: 0;
+    width: var(--sidebar-width);
+    height: 144px;
+    line-height: 144px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.timer {
+    position: absolute;
+    top: 123px;
+    right: 41px;
+    width: 328px;
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+    color: var(--puwp-blue);
+    font-size: 72px;
+}
+
+.game-details {
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    top: 328px;
+    left: 21px;
+}
+
+.cell {
+    width: 150px;
+    height: 20px;
+}
+
+.game-detail {
+    color: var(--puwp-blue);
+}
+
+.schedule {
+    position: absolute;
+    top: 152px;
+    left: 42px;
+    /*display: none; */
+}
+
+.coming-up-title
+{
+    padding-left: 20px;
+    width: 470px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 48px;
+    color: var(--puwp-blue);
+    background: white;
+}
+
+.coming-up-info {
+    padding-left: 20px;
+    padding-top: 4px;
+    min-height: 100px;
+    width: 470px;
+    background: var(--puwp-blue);
+}
+
+.coming-up-runner {
+    font-size: 30px;
+}
+
+.on-deck-wrapper {
+    background: white;
+    margin-top: 30px;
+}
+
+.on-deck-title {
+    color: var(--puwp-blue);
+    padding-left: 20px;
+}
+
+.on-deck-info {
+    margin-bottom: 10px;
+    background: var(--puwp-blue);
+    padding-left: 20px;
+    min-height: 100px;
+    width: 470px;
+}
+
+.on-deck-runner {
+    font-size: 30px;
+}
+
+/* INCENTIVES */
+
+.incentives {
+    position: absolute;
+    top: 152px;
+    left: 42px;
+    display: none;
+}
+
+.incentives-title
+{
+    padding-left: 20px;
+    width: 470px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 48px;
+    color: var(--puwp-blue);
+    background: white;
+}
+
+.incentive-wrapper {
+    background: white;
+    width: 470px;
+}
+
+.incentive {
+    margin-bottom: 10px;
+    background: var(--puwp-blue);
+    padding-left: 20px;
+    height: 170px;
+    width: 470px;
+    padding-top: 10px;
+}
+
+.incentive-name {
+    font-size: 30px;
+}
+
+.incentive-progress-full{
+    width: 300px;
+    height: 44px;
+    position: relative; /* TODO: yikers */
+    background: white;
+}
+
+.incentive-footer {
+    position: absolute;
+    height: 44px;
+    width: 440px;
+    margin-top: 10px;
+}
+
+.incentive-progress1, .incentive-progress2, .incentive-progress3 {
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.incentive-progress-text1, .incentive-progress-text2, .incentive-progress-text3
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    height: 44px;
+    line-height: 44px;
+    width: 140px;
+    text-align: center;
+}
+
+/* BID WAR */
+
+.bid-wars {
+    position: absolute;
+    top: 152px;
+    left: 42px;
+    display: none;
+}
+
+.bid-wars-title
+{
+    padding-left: 20px;
+    width: 470px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 48px;
+    color: var(--puwp-blue);
+    background: white;
+}
+
+.bid-war-name {
+    font-size: 30px;
+}
+
+.bid-wars-wrapper {
+    background: var(--puwp-blue);
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 470px;
+}
+
+.bid {
+    background: var(--puwp-blue);
+    height: 44px;
+    width: 440px;
+    margin-top: 10px;
+}
+
+.bid-wrapper {
+    position: relative;
+}
+
+.bid-name {
+    font-size: 30px;
+    position: absolute;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 10px;
+    color: #00417d;
+}
+
+.bid-progress-full{
+    width: 300px;
+    height: 44px;
+    position: relative; /* TODO: yikers */
+    background: white;
+}
+
+.bid-footer {
+    position: absolute;
+    height: 44px;
+    width: 440px;
+    left: 0;
+}
+
+.bid-progress1, .bid-progress2, .bid-progress3 {
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bid-progress-text1, .bid-progress-text2, .bid-progress-text3
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    height: 44px;
+    line-height: 44px;
+    width: 140px;
+    text-align: center;
+}

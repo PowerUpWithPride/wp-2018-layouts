@@ -87,14 +87,15 @@ body{
 .game-detail {
     font-size: 30px;
     color: #0084ff;
-    width: 150px;
+    min-width: 80px;
+    padding-right: 20px;
 }
 
 .footer-mid-right {
     position: absolute;
     right: 42px;
     height: 131px;
-    width: 500px;
+    width: 750px;
 }
 
 .pronouns {
