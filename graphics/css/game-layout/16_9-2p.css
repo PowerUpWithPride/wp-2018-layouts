@@ -158,14 +158,14 @@ body{
 }
 
 .footer-top {
-    position: absolute; 
+    position: absolute;
     top: 0;
     height: 189px;
     width: 1920px;
 }
 
 .footer-bottom {
-    position: absolute; 
+    position: absolute;
     bottom: 0;
     height: 189px;
     width: 1920px;
@@ -192,4 +192,25 @@ body{
     height: 183px;
     line-height: 183px;
     color: var(--puwp-blue);
+}
+
+.finish-time {
+    background-color: var(--puwp-blue);
+    color: white;
+    padding: 5px;
+    width: 125px;
+    height: 44px;
+    font-size: 40px;
+    margin: 0;
+    position: absolute;
+}
+
+.finish-time-runner1 {
+    top: -59px;
+    left: 5px;
+}
+
+.finish-time-runner2 {
+    top: -59px;
+    left: 305px;
 }
