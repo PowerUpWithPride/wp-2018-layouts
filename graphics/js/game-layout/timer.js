@@ -74,7 +74,9 @@ $(() => {
         function updateFinishedTimes(finishedTimes) {
             $('.finish-time').text("").hide();
             for (let time of finishedTimes) {
-                $('.finish-time-runner' + time.index).html(time.time).show();
+                // Runner index is zero-based.
+                let i = Number.parseInt(time.index) + 1;
+                $('.finish-time-runner' + i).html(time.time).show();
             }
         }
     }

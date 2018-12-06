@@ -194,10 +194,41 @@ body{
 }
 
 .cell {
-    width: 150px;
+    min-width: 150px;
     height: 20px;
 }
 
 .game-detail {
     color: var(--puwp-blue);
+}
+
+.finish-time {
+    background-color: var(--puwp-blue);
+    color: white;
+    padding: 5px;
+    width: 125px;
+    height: 44px;
+    font-size: 40px;
+    margin: 0;
+    position: absolute;
+}
+
+.finish-time-runner1 {
+    top: -59px;
+    left: 116px;
+}
+
+.finish-time-runner2 {
+    top: -59px;
+    left: 118px;
+}
+
+.finish-time-runner3 {
+    top: 50px;
+    left: 4px;
+}
+
+.finish-time-runner4 {
+    top: 50px;
+    left: 4px;
 }
