@@ -218,3 +218,24 @@ top: 43px;
     line-height: 130px;
     color: var(--puwp-blue);
 }
+
+.finish-time {
+    background-color: var(--puwp-blue);
+    color: white;
+    padding: 5px;
+    width: 125px;
+    height: 44px;
+    font-size: 40px;
+    margin: 0;
+    position: absolute;
+}
+
+.finish-time-runner1 {
+    top: -54px;
+    left: 0;
+}
+
+.finish-time-runner2 {
+    top: -54px;
+    left: 305px;
+}
