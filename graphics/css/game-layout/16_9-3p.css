@@ -192,3 +192,29 @@ body{
 .game-detail {
     color: var(--puwp-blue);
 }
+
+.finish-time {
+    background-color: var(--puwp-blue);
+    color: white;
+    padding: 5px;
+    width: 125px;
+    height: 44px;
+    font-size: 40px;
+    margin: 0;
+    position: absolute;
+}
+
+.finish-time-runner1 {
+    top: -59px;
+    left: 186px;
+}
+
+.finish-time-runner2 {
+    top: -59px;
+    left: 183px;
+}
+
+.finish-time-runner3 {
+    top: 50px;
+    left: 74px;
+}
