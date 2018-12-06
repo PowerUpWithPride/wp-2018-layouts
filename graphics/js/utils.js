@@ -28,8 +28,17 @@ function msToTime(duration, noHour) {
 // Fix pronoun wrapping on certain layouts.
 // Put a thin space after each slash if the layout needs wrapping.
 const layoutsToWrapPronouns = [
+    '16_9-2p',
     '4_3-1p',
-    // TODO: Add more here...
+    '4_3-2p',
+    '4_3-3p',
+    '4_3-4p',
+    'gb-1p',
+    'gba-1p',
+    'ds-1p',
+    'ff4r',
+    'z1r',
+    'z3r',
 ];
 
 function fixPronounWrapping(layoutInfo) {

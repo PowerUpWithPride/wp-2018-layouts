@@ -2,7 +2,7 @@
     display: none;
 }
 
-#layout-container-4_3-1p {
+#layout-container-ds-1p {
     display: block;
 }
 
@@ -15,7 +15,7 @@ body{
 }
 
 .wrapper {
-    background: url('../../img/game-layout/4_3-1p.png') no-repeat;
+    background: url('../../img/game-layout/ds-1p.png') no-repeat;
     font-family: "Chosence", sans-serif;
     color: white;
     width: 1920px;

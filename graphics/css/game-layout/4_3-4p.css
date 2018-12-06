@@ -1,0 +1,203 @@
+.game-layout-container{
+    display: none;
+}
+
+#layout-container-4_3-4p {
+    display: block;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --sidebar-width: 495px;
+    --puwp-blue: #0084ff;
+}
+
+.wrapper {
+    background: url('../../img/game-layout/4_3-4p.png') no-repeat;
+    font-family: "Chosence";
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    right: 710px;
+    width: var(--sidebar-width);
+    height: 1080px;
+    font-size: 48px;
+}
+
+.game-name {
+    position: absolute;
+    width: var(--sidebar-width);
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+}
+
+.runner-details1 {
+    position: absolute;
+    top: 509px;
+    left: 440px;
+    width: 257px;
+    height: 46px;
+}
+
+.runner-name1 {
+    position: absolute;
+    right: 0;
+    width: 208px;
+    height: 46px;
+    line-height: 46px;
+    color: var(--puwp-blue);
+    font-size: 30px;
+    text-align: center;
+}
+
+.pronouns1 {
+    position: absolute;
+    font-size: 20px;
+    left: 2px;
+    height: 46px;
+    width: 44px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.runner-details2 {
+    position: absolute;
+    top: 509px;
+    right: 17px;
+    width: 257px;
+    height: 46px;
+}
+
+.runner-name2 {
+    position: absolute;
+    right: 0;
+    width: 208px;
+    height: 46px;
+    line-height: 46px;
+    color: var(--puwp-blue);
+    font-size: 30px;
+    text-align: center;
+}
+
+.pronouns2 {
+    position: absolute;
+    font-size: 20px;
+    left: 2px;
+    height: 46px;
+    width: 44px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.runner-details3 {
+    position: absolute;
+    top: 525px;
+    left: 17px;
+    width: 257px;
+    height: 46px;
+}
+
+.runner-name3 {
+    position: absolute;
+    right: 0;
+    width: 208px;
+    height: 46px;
+    line-height: 46px;
+    color: var(--puwp-blue);
+    font-size: 30px;
+    text-align: center;
+}
+
+.pronouns3 {
+    position: absolute;
+    font-size: 20px;
+    left: 2px;
+    height: 46px;
+    width: 44px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.runner-details4 {
+    position: absolute;
+    top: 525px;
+    right: 438px;
+    width: 257px;
+    height: 46px;
+}
+
+.runner-name4 {
+    position: absolute;
+    right: 0;
+    width: 208px;
+    height: 46px;
+    line-height: 46px;
+    color: var(--puwp-blue);
+    font-size: 30px;
+    text-align: center;
+}
+
+.pronouns4 {
+    position: absolute;
+    font-size: 20px;
+    left: 2px;
+    height: 46px;
+    width: 44px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.footer-left {
+    position: absolute;
+    left: 0;
+    width: 206px;
+    height: 131px;
+}
+
+.donation-total{
+    position: absolute;
+    bottom: 0px;
+    width: var(--sidebar-width);
+    height: 146px;
+    line-height: 146px;
+    font-size: 100px;
+    text-align: center;
+}
+
+.timer {
+    position: absolute;
+    top: 123px;
+    right: 41px;
+    width: 328px;
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+    color: var(--puwp-blue);
+    font-size: 72px;
+}
+
+.game-details {
+    display: flex;
+    position: absolute;
+    font-size: 30px;
+    top: 224px;
+    left: 21px;
+}
+
+.cell {
+    width: 150px;
+    height: 20px;
+}
+
+.game-detail {
+    color: var(--puwp-blue);
+}

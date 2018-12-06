@@ -1,0 +1,190 @@
+.game-layout-container{
+    display: none;
+}
+
+#layout-container-16_9-2p {
+    display: block;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    --puwp-blue: #0084ff;
+}
+
+.wrapper {
+    background: url('../../img/game-layout/16_9-2p.png') no-repeat;
+    font-family: "Chosence", sans-serif;
+    color: white;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 1920px;
+    height: 378px;
+    font-size: 70px;
+}
+
+.footer-mid {
+    position: absolute;
+    left: 206px;
+    width: 1508px;
+    height: 131px;
+}
+
+.footer-mid-left {
+    position: absolute;
+    left: 42px;
+    height: 131px;
+    width: 1508px;
+}
+
+.game-name {
+    position: absolute;
+    width: 1920px;
+    height: 130px;
+    left: 20px;
+    line-height: 130px;
+    font-size: 95px;
+    top: 30px;
+}
+
+.game-details {
+    display: flex;
+    position: absolute;
+    bottom: 48px;
+    left: 25px;
+    font-size: 48px;
+}
+
+.game-detail {
+    color: #0084ff;
+    width: 200px;
+}
+
+.cell {
+    width: 200px;
+    height: 52px;
+}
+
+.footer-mid-right {
+    position: absolute;
+    right: 42px;
+    height: 131px;
+    width: 500px;
+}
+
+.runner-details1 {
+    position: absolute;
+    top: 622px;
+    width: 444px;
+    height: 80px;
+}
+
+.runner-name1 {
+    position: absolute;
+    left: 0;
+    width: 359px;
+    height: 80px;
+    line-height: 80px;
+    color: var(--puwp-blue);
+    font-size: 55px;
+    text-align: center;
+}
+
+.pronouns1 {
+    position: absolute;
+    font-size: 30px;
+    right: 8px;
+    top: 4px;
+    height: 80px;
+    width: 70px;
+    word-wrap: break-word;
+    color: white;
+    text-align: center;
+}
+
+.runner-details2 {
+    position: absolute;
+    top: 622px;
+    right: 0;
+    width: 444px;
+    height: 80px;
+}
+
+.runner-name2 {
+    position: absolute;
+    right: 0;
+    width: 359px;
+    height: 80px;
+    line-height: 80px;
+    color: var(--puwp-blue);
+    font-size: 55px;
+    text-align: center;
+}
+
+.pronouns2 {
+    position: absolute;
+    font-size: 30px;
+    right: 370px;
+    top: 4px;
+    height: 80px;
+    width: 64px;
+    word-wrap: break-word;
+    color: white;
+    text-align: center;
+}
+
+.runner-details3, .runner-details4 {
+    display: none;
+}
+
+.runner-name {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.footer-top {
+    position: absolute; 
+    top: 0;
+    height: 189px;
+    width: 1920px;
+}
+
+.footer-bottom {
+    position: absolute; 
+    bottom: 0;
+    height: 189px;
+    width: 1920px;
+}
+
+.timer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 358px;
+    height: 183px;
+    line-height: 183px;
+    text-align: center;
+    font-size: 72px;
+}
+
+.donation-total {
+    position: absolute;
+    font-size: 72px;
+    text-align: center;
+    right: 0;
+    bottom: 0;
+    width: 358px;
+    height: 183px;
+    line-height: 183px;
+    color: var(--puwp-blue);
+}

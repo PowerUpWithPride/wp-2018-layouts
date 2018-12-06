@@ -15,8 +15,18 @@ $(() => {
         let gameSystem = $('.platform');
         let gameYear = $('.year');
         let gameEstimate = $('.estimate');
-        let name = $(".runner-name1");
-        let pronouns = $(".pronouns1");
+
+        let name1 = $(".runner-name1");
+        let pronouns1 = $(".pronouns1");
+
+        let name2 = $(".runner-name2");
+        let pronouns2 = $(".pronouns2");
+
+        let name3 = $(".runner-name3");
+        let pronouns3 = $(".pronouns3");
+
+        let name4 = $(".runner-name4");
+        let pronouns4 = $(".pronouns4");
 
         gameTitle.html("Title");
         gameCategory.html("category");
@@ -24,8 +34,17 @@ $(() => {
         gameYear.html("1902");
         gameEstimate.html("5:15:30");
 
-        name.text("Conklestothemax");
-        pronouns.text("They/Them");
+        name1.text("Conklestothemax");
+        pronouns1.text("He/Him");
+
+        name2.text("Protomagicalgirl");
+        pronouns2.text("It/She");
+
+        name3.text("arael");
+        pronouns3.text("They/She");
+
+        name4.text("iBazly");
+        pronouns4.text("He/They");
 
         fixPronounWrapping(globalLayoutInfo);
     }

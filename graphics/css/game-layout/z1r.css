@@ -2,7 +2,7 @@
     display: none;
 }
 
-#layout-container-4_3-1p {
+#layout-container-z1r {
     display: block;
 }
 
@@ -10,12 +10,12 @@ body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    --sidebar-width: 495px;
+    --sidebar-width: 724px;
     --puwp-blue: #0084ff;
 }
 
 .wrapper {
-    background: url('../../img/game-layout/4_3-1p.png') no-repeat;
+    background: url('../../img/game-layout/z1r.png') no-repeat;
     font-family: "Chosence", sans-serif;
     color: white;
     width: 1920px;
@@ -42,10 +42,10 @@ body{
 
 .runner-details {
     position: absolute;
-    right: 26px;
-    width: 444px;
+    right: 56px;
+    width: 597px;
     height: 80px;
-    top: 228px;
+    top: 238px;
 }
 
 .runner-name {
@@ -88,8 +88,8 @@ body{
 
 .timer {
     position: absolute;
-    top: 123px;
-    right: 41px;
+    top: 132px;
+    right: 72px;
     width: 328px;
     height: 80px;
     line-height: 80px;
@@ -102,13 +102,13 @@ body{
     display: flex;
     position: absolute;
     font-size: 30px;
-    top: 328px;
-    left: 21px;
+    top: 337px;
+    left: 67px;
 }
 
 .cell {
     width: 150px;
-    height: 20px;
+    height: 40px;
 }
 
 .game-detail {
