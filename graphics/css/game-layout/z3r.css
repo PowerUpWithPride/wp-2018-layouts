@@ -74,7 +74,7 @@ body{
     height: 130px;
     left: 20px;
     line-height: 130px;
-    font-size: 95px;
+    font-size: 84px;
     top: 42px;
 }
 
@@ -183,7 +183,7 @@ body{
 }
 
 .footer-top {
-    position: absolute; 
+    position: absolute;
 top: -69px;
 left: 427px;
 height: 130px;
@@ -191,7 +191,7 @@ width: 1920px;
 }
 
 .footer-bottom {
-    position: absolute; 
+    position: absolute;
 	bottom: 50px;
     left: 417px;
     height: 130px;
