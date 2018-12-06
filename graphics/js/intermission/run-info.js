@@ -5,7 +5,7 @@
 const speedcontrolBundle = 'nodecg-speedcontrol';
 const puwpBundle = 'nodecg-puwp';
 
-const rotateInterval = 5000;  // FIXME
+const rotateInterval = 15000;
 let rotateState = 0;
 
 // Initialize the page.
