@@ -185,7 +185,6 @@ body{
 }
 
 .cell {
-    width: 100000px;
     height: 51px;
     min-width: 175px;
 }
