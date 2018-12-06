@@ -5,7 +5,7 @@
 const speedcontrolBundle = 'nodecg-speedcontrol';
 const puwpBundle = 'nodecg-puwp';
 
-const rotateInterval = 15000;
+const rotateInterval = 5000;  // FIXME
 let rotateState = 0;
 
 // Initialize the page.
@@ -58,16 +58,19 @@ $(() => {
     function rotate() {
         if (rotateState === 0) {
             rotateState = 1;
+            $('.bid-wars').hide();
             $('.schedule').fadeOut(500, () => {
                 $('.incentives').fadeIn(500);
             });
         } else if (rotateState === 1) {
             rotateState = 2;
+            $('.schedule').hide();
             $('.incentives').fadeOut(500, () => {
                 $('.bid-wars').fadeIn(500);
             });
         } else {
             rotateState = 0;
+            $('.incentives').hide();
             $('.bid-wars').fadeOut(500, () => {
                 $('.schedule').fadeIn(500);
             });
