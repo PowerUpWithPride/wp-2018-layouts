@@ -284,7 +284,7 @@ $(() => {
 
             let incentiveTotalValue = bid.goal;
             let incentiveProgressValue = bid.total;
-            let incentiveTextConcat = "$" + incentiveProgressValue + "/$" + incentiveTotalValue;
+            let incentiveTextConcat = currencyFormatter.format(incentiveProgressValue) + "/" + currencyFormatter.format(incentiveTotalValue);
             incentiveProgress.width((incentiveProgressValue / incentiveTotalValue) * incentiveProgressFull.width());
             incentiveProgress.css('background-color', getProgressBarColor(incentiveProgressValue, incentiveTotalValue));
 
@@ -331,7 +331,7 @@ $(() => {
                     bidProgress.width(progress * bidProgressFull.width());
                     bidProgress.css('background-color', getProgressBarColor(bidProgressValue, bidWarTotal));
                     bidName.text(option.name);
-                    bidProgressText.text('$' + bidProgressValue);
+                    bidProgressText.text(currencyFormatter.format(bidProgressValue));
 
                     // Show the container for this bid.
                     bidName.closest(".bid").show();
