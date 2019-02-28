@@ -103,29 +103,21 @@ $(() => {
             let currentTeamsData = getRunnersFromRunData(runData);
 
             // Split year out from system platform, if present.
-            let system = runData.system.split("-");
-            let year = '';
-
-            if (system.length > 1) {
-                year = system[1].trim();
-            }
-            system = system[0].trim();
-
             gameTitle.html(runData.game);
             gameCategory.html(runData.category);
-            gameSystem.html(system);
-            gameYear.html(year);
+            gameSystem.html(runData.system);
+            gameYear.html(runData.release);
             gameEstimate.html(runData.estimate);
 
             // Set each player names and pronouns.
             let i = 0;
             for (let team of currentTeamsData) {
-                for (let member of team.members) {
+                for (let player of team.players) {
                     i += 1;
                     let name = $(".runner-name" + i);
                     let pronouns = $(".pronouns" + i);
-                    name.text(member.name);
-                    pronouns.text(member.pronouns);
+                    name.text(player.name);
+                    pronouns.text(player.pronouns);
                     FixSize('.runner-name' + i);
                 }
             }

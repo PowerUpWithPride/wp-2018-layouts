@@ -25,8 +25,8 @@ $(() => {
 
         // This is where the timer information is received.
         // The "change" event is triggered whenever the time changes or the state changes.
-        let stopwatch = nodecg.Replicant('stopwatch', speedcontrolBundle);
-        stopwatch.on('change', (newVal, oldVal) => {
+        let timer = nodecg.Replicant('timer', speedcontrolBundle);
+        timer.on('change', (newVal, oldVal) => {
             if (!newVal) {
                 return;
             }
@@ -42,9 +42,9 @@ $(() => {
         // When the connection is restored, the server timer will recover and take over again.
         function backupTimer() {
             backupTimerTO = setTimeout(backupTimer, 200);
-            if (stopwatch.value.state === 'running') {
-                let missedTime = Date.now() - stopwatch.value.timestamp;
-                let timeOffset = stopwatch.value.milliseconds + missedTime;
+            if (timer.value.state === 'running') {
+                let missedTime = Date.now() - timer.value.timestamp;
+                let timeOffset = timer.value.milliseconds + missedTime;
                 updateTimer({time:msToTime(timeOffset)});
             }
         }

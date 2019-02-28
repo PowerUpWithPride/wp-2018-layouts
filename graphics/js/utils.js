@@ -76,24 +76,23 @@ function getProgressBarColor(current, max){
 function getRunnersFromRunData(runData) {
     let currentTeamsData = [];
     runData.teams.forEach(team => {
-        let teamData = {members: []};
-        team.members.forEach(member => {teamData.members.push(createMemberData(member));});
+        let teamData = {players: []};
+        team.players.forEach(player => {teamData.players.push(createPlayerData(player));});
         currentTeamsData.push(teamData);
     });
     return currentTeamsData;
 }
 
 // Easy access to create member data object used above.
-function createMemberData(member) {
+function createPlayerData(player) {
     // Gets username from URL.
-    let twitchUsername;
-    if (member.twitch && member.twitch.uri) {
-        twitchUsername = member.twitch.uri.split('/');
-        twitchUsername = twitchUsername[twitchUsername.length-1];
+    let twitchUsername = '';
+    if (player.social && player.social.twitch) {
+        twitchUsername = player.social.twitch;
     }
 
     // Parse pronouns from the runner name, if they're present.
-    let name = member.names.international.split('-');
+    let name = player.name.split('-');
     let pronouns = '';
     if (name.length > 1) {
         pronouns = name[1].trim();
@@ -104,6 +103,6 @@ function createMemberData(member) {
         name: name,
         pronouns: pronouns,
         twitch: twitchUsername,
-        region: member.region
+        region: player.region
     };
 }

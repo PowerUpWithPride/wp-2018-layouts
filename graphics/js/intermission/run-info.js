@@ -35,7 +35,7 @@ $(() => {
         // Completely skips this if the run variable isn't defined.
         if (run) {
             for (let i = 0; i < runDataArray.value.length; i++) {
-                if (run.runID === runDataArray.value[i].runID) {
+                if (run.id === runDataArray.value[i].id) {
                     indexOfRun = i; break;
                 }
             }
@@ -218,8 +218,8 @@ $(() => {
         let currentTeamsData = getRunnersFromRunData(runData);
         let names = [];
         for (let team of currentTeamsData) {
-            for (let member of team.members) {
-                names.push(member.name);
+            for (let player of team.players) {
+                names.push(player.name);
             }
         }
         return names;
