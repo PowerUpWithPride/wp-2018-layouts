@@ -3,7 +3,7 @@
 
 // The bundle name where all the run information is pulled from.
 const speedcontrolBundle = 'nodecg-speedcontrol';
-const puwpBundle = 'nodecg-puwp';
+const donationBundle = 'speedcontrol-gdqtracker';
 
 const rotateInterval = 15000;
 let rotateState = 0;
@@ -13,7 +13,7 @@ $(() => {
     // Run data.
     let runDataActiveRun = nodecg.Replicant('runDataActiveRun', speedcontrolBundle);
     let runDataArray = nodecg.Replicant('runDataArray', speedcontrolBundle);
-    let bids = nodecg.Replicant('bids', puwpBundle);
+    let bids = nodecg.Replicant('bids', donationBundle);
 
     // Get the next X runs in the schedule.
     function getNextRuns(runData, amount) {

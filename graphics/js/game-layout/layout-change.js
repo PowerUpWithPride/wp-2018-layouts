@@ -16,10 +16,10 @@ $(() => {
 
     function loadFromSpeedControl() {
         // The bundle name where all the run information is pulled from.
-        const puwpBundle = 'nodecg-puwp';
+        const layoutBundle = 'speedcontrol-layoutswitch';
 
         // Replicants
-        let currentLayout = nodecg.Replicant('currentGameLayout', puwpBundle);
+        let currentLayout = nodecg.Replicant('currentGameLayout', layoutBundle);
 
         // Listens for the layout style to change.
         currentLayout.on('change', newVal => {

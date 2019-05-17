@@ -1,4 +1,4 @@
-This is a [NodeCG](http://github.com/nodecg/nodecg) graphics bundle.  It is intended to be used with Speedcontrol, as well as [our extra Speedcontrol addon bundle](http://github.com/PowerUpWithPride/nodecg-puwp) for some extra core functionality.
+This is a [NodeCG](http://github.com/nodecg/nodecg) graphics bundle.  It is intended to be used with Speedcontrol, as well as our extra Speedcontrol addon bundles for some extra core functionality.
 
 ## Getting Started
 
@@ -20,11 +20,12 @@ nodecg setup
 ```
 
 ### 4. Install bundles
-Install the Speedcontrol bundle, [our extra Speedcontrol functionality](http://github.com/PowerUpWithPride/nodecg-puwp), and this bundle from GitHub using the following commands:
+Install the Speedcontrol bundle, our extra Speedcontrol functionality, and this bundle from GitHub using the following commands:
 
 ```bash
 nodecg install speedcontrol/nodecg-speedcontrol
-nodecg install PowerUpWithPride/nodecg-puwp
+nodecg install PowerUpWithPride/speedcontrol-layoutswitch
+nodecg install PowerUpWithPride/speedcontrol-gdqtracker
 nodecg install PowerUpWithPride/wp-2018-layouts
 ```
 
@@ -36,10 +37,11 @@ You can generate default config files for the bundles based on their config sche
 
 ```bash
 nodecg defaultconfig nodecg-speedcontrol
-nodecg defaultconfig nodecg-puwp
+nodecg defaultconfig speedcontrol-layoutswitch
+nodecg defaultconfig speedcontrol-gdqtracker
 ```
 
-This will create a new subdirectory called `cfg` for the config files.  Update the `nodecg-puwp.json` file with your settings for any extra custom layouts, and donation tracker settings if you're using it.
+This will create a new subdirectory called `cfg` for the config files.  Update the `speedcontrol-layoutswitch.json` and `speedcontrol-gdqtracker.json` files with your settings for any extra custom layouts, and donation tracker settings if you're using it.
 
 You can check out the JSON config files from the [config files repository](https://github.com/PowerUpWithPride/puwp-config-files/tree/master/layouts) for NodeCG and Speedcontrol themselves to see exactly what settings we're using.  You should copy the Speedcontrol one at least, because that includes the Twitch integration settings.
 

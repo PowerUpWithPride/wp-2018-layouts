@@ -79,7 +79,7 @@ $(() => {
     function loadFromSpeedControl() {
         // The bundle name where all the run information is pulled from.
         const speedcontrolBundle = 'nodecg-speedcontrol';
-        const puwpBundle = 'nodecg-puwp';
+        const layoutBundle = 'speedcontrol-layoutswitch';
 
         // JQuery selectors.
         let gameTitle = $('.game-name');
@@ -96,7 +96,7 @@ $(() => {
                 updateSceneFields(newVal);
         });
 
-        let currentLayout = nodecg.Replicant('currentGameLayout', puwpBundle);
+        let currentLayout = nodecg.Replicant('currentGameLayout', layoutBundle);
 
         // Sets information on the pages for the run.
         function updateSceneFields(runData) {

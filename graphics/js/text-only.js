@@ -2,7 +2,8 @@
 $(() => {
     // The bundle name where all the run information is pulled from.
     const speedcontrolBundle = 'nodecg-speedcontrol';
-    const puwpBundle = 'nodecg-puwp';
+    const layoutBundle = 'speedcontrol-layoutswitch';
+    const donationBundle = 'speedcontrol-gdqtracker';
 
     // JQuery selectors.
     let gameTitle = $('#gameTitle');
@@ -23,7 +24,7 @@ $(() => {
             updateSceneFields(newVal);
     });
 
-    let currentLayout = nodecg.Replicant('currentGameLayout', puwpBundle);
+    let currentLayout = nodecg.Replicant('currentGameLayout', layoutBundle);
     currentLayout.on('change', (newVal, oldVal) => {
         if (newVal) {
             gameLayout.text(`${newVal.name} (${newVal.code})`);
@@ -46,7 +47,7 @@ $(() => {
     });
 
     // This is the current bids.
-    let bids = nodecg.Replicant('bids', puwpBundle);
+    let bids = nodecg.Replicant('bids', donationBundle);
     bids.on('change', (newVal, oldVal) => {
         updateBids(newVal);
     });
